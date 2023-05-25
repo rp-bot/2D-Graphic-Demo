@@ -8,35 +8,49 @@
 		/>
 	</head>
 	<body class="h-screen">
-		<div class="flex flex-col justify-center items-center gap-4">
-			<h1 class="text-5xl font-bold pt-20">HELLO WORLD</h1>
-			<h2 class="text-xl">Canvas design</h2>
+		<div class="flex flex-col justify-center items-center gap-10">
 			<div
-				class="flex flex-row items-center bg-gray-200 p-20 py-2 rounded-lg"
+				class="mt-5 p-8 flex flex-row justify-center items-center gap-10 bg-gray-200 rounded-lg"
 			>
-				<canvas
-					id="myCanvas"
-					width="500"
-					height="500"
-					class="h-[30rem]"
-				></canvas>
-
-				<h3 class="text-lg font-semibold">generative gradient</h3>
+				<div>
+					<img
+						src="../public/images/walrus.gif"
+						height="80"
+						width="80"
+						class="rounded-md"
+					/>
+				</div>
+				<div>
+					<h1 class="text-5xl font-bold ">HELLO WORLD</h1>
+					<h2 class="text-xl">Canvas design</h2>
+				</div>
 			</div>
-			<div
-				class="flex flex-col items-center items-center bg-gray-200 p-20 py-2 mt-10 rounded-lg"
-			>
-				<h3
-					class="text-2xl font-semibold self-center justify-self-center pt-10"
+			<div class="flex flex-row gap-10">
+				<div
+					class="flex flex-col items-center justify-center bg-gray-200 p-20 py-10 rounded-lg"
 				>
-					CLICK ME
-				</h3>
-				<canvas
-					id="imageCanvas"
-					width="500"
-					height="500"
-					class="cursor-pointer"
-				></canvas>
+					<h3
+						class="text-2xl font-semibold self-center justify-self-center "
+					>
+						GENERATIVE GRADIENT
+					</h3>
+					<canvas id="myCanvas" width="500" height="500"></canvas>
+				</div>
+				<div
+					class="flex flex-col items-center items-center bg-gray-200 p-20 py-10  rounded-lg"
+				>
+					<h3
+						class="text-2xl font-semibold self-center justify-self-center "
+					>
+						CLICK ME
+					</h3>
+					<canvas
+						id="imageCanvas"
+						width="500"
+						height="500"
+						class="cursor-pointer"
+					></canvas>
+				</div>
 			</div>
 		</div>
 
@@ -48,11 +62,11 @@
 									// Create a gradient
 						var gradient = ctx.createLinearGradient(0, 0, 500, 500);
 						gradient.addColorStop(0, "blue");
-						gradient.addColorStop(1, "green");
+						gradient.addColorStop(1, "purple");
 
 									// Draw a circle with the gradient
 						ctx.beginPath();
-						ctx.arc(180, 250, 100, 0, Math.PI * 2);
+						ctx.arc(250, 250, 100, 0, Math.PI * 2);
 						ctx.fillStyle = gradient;
 						ctx.fill();
 
